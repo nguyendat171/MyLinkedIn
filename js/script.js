@@ -20,9 +20,9 @@ app.controller('Controller', function($scope, $http) {
             $scope.myExperience = response.data.experience;
             $scope.myLanguage = response.data.language;
             $scope.myimage = response.data.images;
-            $scope.myskill = response.data.skill;
-            $scope.myproject = response.data.project;
-            $scope.myeducation = response.data.education;
+            $scope.mySkill = response.data.skill;
+            $scope.myProject = response.data.project;
+            $scope.myEducation = response.data.education;
         });
     $scope.AddSummary=function()
     {
@@ -33,31 +33,31 @@ app.controller('Controller', function($scope, $http) {
     };
     $scope.AddExperience=function()
     {
-        $scope.myData.experience.push({value:$scope.experience});
+        $scope.myExperience.push({experience:$scope.experience});
         $scope.visibleexperience=false;
         $scope.experience="";
     };
     $scope.AddProject=function()
     {
-        $scope.myData.PROJECT.push({value:$scope.project});
+        $scope.myProject.push({project:$scope.project});
         $scope.visibleproject=false;
         $scope.project="";
     };
     $scope.AddLanguage=function()
     {
-        $scope.myData.PROJECT.push({value:$scope.language});
+        $scope.myLanguage.push({language:$scope.language});
         $scope.visiblelanguage=false;
         $scope.language="";
     };
     $scope.AddSkill=function()
     {
-        $scope.myData.SKILL.push({value:$scope.skill});
+        $scope.mySkill.push({skill:$scope.skill});
         $scope.visibleskill=false;
         $scope.skill="";
     };
     $scope.AddEducation=function()
     {
-        $scope.myData.EDUCATION.push({value:$scope.education});
+        $scope.myEducation.push({education:$scope.education});
         $scope.visibleeducation=false;
         $scope.education="";
     };
