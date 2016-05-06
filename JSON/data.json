@@ -10,53 +10,40 @@
     }
   ],
   "summary":[
-    {
-      "summary":"- Learned the basics of programming and improve"},
+    {"summary":"- Learned the basics of programming and improve"},
     {"summary":"- Keen to learn new technologies."},
-    { "summary":"- Keen to read technology books"},
-    {  "summary":"- Like to discover new things"},
-    {  "summary":"* Familiar with  array of programming languages and concepts, including:"},
-    {  "summary":"  + Programming langues: C/C++,C# .NET"},
-    {  "summary":"  + Object Oriented programming "},
-    { "summary":"  + Design software"},
-    { "summary":"  + Database: MS SQL Server."},
-    {  "summary":" + Web: Javascript, CSS, ASP.NET, HTML "
-    }
-
+    {"summary":"- Keen to read technology books"},
+    {"summary":"- Like to discover new things"},
+    {"summary":"* Familiar with  array of programming languages and concepts, including:"},
+    {"summary":"  + Programming langues: C/C++,C# .NET"},
+    {"summary":"  + Object Oriented programming "},
+    {"summary":"  + Design software"},
+    {"summary":"  + Database: MS SQL Server."},
+    {"summary":" + Web: Javascript, CSS, ASP.NET, HTML "}
   ],
   "experience":[
-    {
-      "experience1":"- Graduation next year.",
-      "experience2":"- I have not worked in any other company.",
-      "experience3":"- I don't have much experience in work."
-    }
+    {"experience":"- Graduation next year."},
+    {"experience":"- I have not worked in any other company."},
+    {"experience":"- I don't have much experience in work."}
   ],
   "project":[
-    {
-      "project1":"- Simple chess with c ++.",
-      "project2":"- Paint application with WPF.",
-      "project3":"- Caro games online Gomoku.",
-      "project4":"- Others..."
-    }
+    {"project":"- Simple chess with c ++."},
+    {"project":"- Paint application with WPF."},
+    {"project":"- Caro games online Gomoku."},
+    {"project":"- Others..."}
   ],
 
   "language":[
-    {
-      "language1": "+ Vietnamese",
-      "language2": "+ English"
-    }
+    {"language": "+ Vietnamese"},
+    {"language": "+ English"}
   ],
 
   "skill":[
-    {
-      "skill1":"- Programing language: C, C++, C#, Java, HTML CSS",
-      "skill2":"- Teamwork, softskills, English"
-    }
+    {"skill":"- Programing language: C, C++, C#, Java, HTML CSS"},
+    {"skill":"- Teamwork, softskills, English"}
   ],
   "education":[
-    {
-      "education1":"- University of Science, Ho Chi Minh City"
-    }
+    {"education":"- University of Science, Ho Chi Minh City"}
   ],
   "images":[
     {
