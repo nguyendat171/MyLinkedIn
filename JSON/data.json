@@ -1,7 +1,7 @@
 {
   "profile": [
     {
-      "name":"Quoc Dat Nguyen",
+      "name":"Quốc Đạt Nguyễn",
       "position":"Student at University of Science Ho Chi Minh City",
       "country" :"Vietnam   ",
       "major":"Software Engineering",
@@ -11,30 +11,32 @@
   ],
   "summary":[
     {
-      "summary1":"- Learned the basics of programming and improve",
-      "summary2":"- Keen to learn new technologies.",
-      "summary3":"- Keen to read technology books",
-      "summary4":"- Like to discover new things",
-      "summary5":"* Familiar with  array of programming languages and concepts, including:",
-      "summary6":"  + Programming langues: C/C++,C# .NET",
-      "summary7":"  + Object Oriented programming ",
-      "summary8":"  + Design software",
-      "summary9":"  + Database: MS SQL Server.",
-      "sumary10":"  + Web: Javascript, CSS, ASP.NET, HTML "
+      "summary":"- Learned the basics of programming and improve"},
+    {"summary":"- Keen to learn new technologies."},
+    { "summary":"- Keen to read technology books"},
+    {  "summary":"- Like to discover new things"},
+    {  "summary":"* Familiar with  array of programming languages and concepts, including:"},
+    {  "summary":"  + Programming langues: C/C++,C# .NET"},
+    {  "summary":"  + Object Oriented programming "},
+    { "summary":"  + Design software"},
+    { "summary":"  + Database: MS SQL Server."},
+    {  "summary":" + Web: Javascript, CSS, ASP.NET, HTML "
     }
 
   ],
   "experience":[
     {
-      "experience1":"Graduation nextyear.I have not worked in any other company. I don't have much experience in work."
+      "experience1":"- Graduation next year.",
+      "experience2":"- I have not worked in any other company.",
+      "experience3":"- I don't have much experience in work."
     }
   ],
   "project":[
     {
-      "project1":"Simple chess with c ++.",
-      "project2":"Paint application with WPF.",
-      "project3":"Caro games online Gomoku.",
-      "project4":"Others..."
+      "project1":"- Simple chess with c ++.",
+      "project2":"- Paint application with WPF.",
+      "project3":"- Caro games online Gomoku.",
+      "project4":"- Others..."
     }
   ],
 
@@ -47,13 +49,13 @@
 
   "skill":[
     {
-      "skill1":"Programing language: C, C++, C#, Java, HTMT CSS",
-      "skill2":"Teamwork, softskills, English"
+      "skill1":"- Programing language: C, C++, C#, Java, HTML CSS",
+      "skill2":"- Teamwork, softskills, English"
     }
   ],
   "education":[
     {
-      "education1":"University of Science, Ho Chi Minh City"
+      "education1":"- University of Science, Ho Chi Minh City"
     }
   ],
   "images":[

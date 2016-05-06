@@ -3,11 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>MyCV_1312124</title>
-    <script language="javascript" src="angular.min.js"></script>
-    <script language="javascript" src="script.js"></script>
+    <script language="javascript" src="js/angular.min.js"></script>
+    <script language="javascript" src="js/script.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
+    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <link href="css/xeditable.css" rel="stylesheet">
+    <script src="js/xeditable.js"></script>
 </head>
 <body style="background-color: #c0c0c0">
     <div ng-app="MyCV" class="container"style="width: 960px; margin: 50px auto; background-color: white">
@@ -18,14 +20,19 @@
                 </div>
                 <div class="col-sm-8">
                     <div ng-repeat="x in myData" style=" margin-left: 10px; ">
-                        <div style="margin-top:20px;font-size: 20px;font-weight: bold;">{{x.name }}</div>
-                        <div style="font-size: 15px;">{{x.position}}</div>
-                        <div >Major: {{x.major}}</div>
-                        <div>Email: {{x.email}}</div>
-                        <div>Phone: {{x.phone}}</div>
-                        <div style="font-size: 15px;">Nationality: {{x.country}}</div>
+                        <a style="margin-top:20px;font-size: 20px;font-weight: bold;" editable-text="x.name">{{x.name || "empty" }}</a>
+                        <br/>
+                        <a style="font-size: 15px;" editable-text="x.position">{{x.position || "empty"}}</a>
+                        <br/>
+                       <span> Major:</span> <a  editable-text = "x.major" > {{x.major || "empty"}}</a>
+                        <br/>
+                        <span> Email:</span><a editable-text = "x.email"> {{x.email || "empty"}}</a>
+                        <br/>
+                        <span> Phone:</span><a editable-text = "x.phone"> {{x.phone || "empty"}}</a>
+                        <br/>
+                        <span> Nationality:</span><a style="font-size: 15px;" editable-text = "x.country"> {{x.country || "empty"}}</a>
                         <br/><br/>
-                        <button style="margin-left: 20px;display: inline;border-radius:10px;width: 200px;height: 50px;background-color:#337ab7;">Send </button>
+                        <button style="margin-left: 20px;display: inline;border-radius:10px;width: 200px;height: 50px;background-color:#337ab7;">Send to email</button>
 
                     </div>
 
@@ -43,19 +50,21 @@
                 <div style="margin-top: 10px;" class="col-sm-12"id="summary" style="border-bottom: 1px solid #c0c0c0; ">
                     <div ng-repeat="i in myimage"style="display: inline;">
                         <img src="{{i.summary}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                        <p style="display: inline; font-size: 20px;">Summary</p>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Summary</p>
+                    <form ng-show="visiblesummary">
+                        <label>Information:</label>
+                        <input type="text" ng-model="summary" placeholder="INFORMATION" ng-required/>
+                        <input  type="button"  value="Save" ng-click="AddSummary()">
+                    </form>
+                    <div ng-hide="visiblesummary">
+
+                            </span><button style="margin-left:650px;width:50px;height:30px;" ng-click="visiblesummary=true">Add</button> </br></br>
                     <div ng-repeat="y in mySummary" style="margin-left: 30px; margin-top: 10px;">
-                        <div> {{y.summary1}}</div>
-                        <div> {{y.summary2}}</div>
-                        <div> {{y.summary3}}</div>
-                        <div> {{y.summary4}}</div>
-                        <div> {{y.summary5}}</div>
-                        <div> {{y.summary6}}</div>
-                        <div> {{y.summary7}}</div>
-                        <div> {{y.summary8 }}</div>
-                        <div> {{y.summary9 }}</div>
-                        <div> {{y.summary10 }}</div>
+                        <a editable-text = "y.summary"> {{y.summary || "empty"}}</a>
+                        <br/>
+
+                    </div>
                     </div>
                     <br/>
                     <div style="background-color: #c0c0c0;width: 100px;height: 1px;"/>
@@ -63,12 +72,26 @@
                 <hr>
                 <div class="col-sm-12" id="experience" style="border-bottom: 1px solid #c0c0c0; ">
                     <br/><br/>
+
                     <div ng-repeat="i in myimage"style="display: inline;">
                         <img src="{{i.experience}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                        <p style="display: inline; font-size: 20px;">Experience</p>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Experience</p>
+                    <form ng-show="visibleexperience">
+                        <label>Information:</label>
+                        <input type="text" ng-model="experience" placeholder="INFORMATION" ng-required/>
+                        <input  type="button"  value="Save" ng-click="AddExperience()">
+                    </form>
+                    <div ng-hide="visibleexperience">
+
+                        </span><button style="margin-left:635px;width:50px;height:30px;" ng-click="visibleexperience=true">Add</button> </br></br>
                     <div ng-repeat="ex in myExperience">
-                        <div style="margin-left: 30px;margin-top: 20px;">{{ex.experience1}}</div>
+                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience1 ">{{ex.experience1 || "empty"}}</a>
+                        <br/>
+                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience2 ">{{ex.experience2 || "empty"}}</a>
+                        <br/>
+                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience3 ">{{ex.experience3 || "empty"}}</a>
+                    </div>
                     </div>
                     <br/><br/>
 
@@ -80,12 +103,19 @@
                     <br/><br/>
                     <div ng-repeat="i in myimage"style="display: inline;"   >
                         <img src="{{i.project}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                        <p style="display: inline; font-size: 20px;">Project</p>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Project</p>
+                    <form ng-show="visibleproject">
+                        <label>Information:</label>
+                        <input type="text" ng-model="project" placeholder="INFORMATION" ng-required/>
+                        <input  type="button"  value="Save" ng-click="AddProject()">
+                    </form>
+                    <div ng-hide="visibleproject">
 
-                    <ul ng-repeat="p in myproject" style="margin-top: 10px;">
-                        <li>{{p.project1}}</li>
-                        <li>{{p.project2}}</li>
+                        </span><button style="margin-left:635px;width:50px;height:30px;" ng-click="visibleproject=true">Add</button> </br></br>                    <ul ng-repeat="p in myproject" style="margin-top: 10px;">
+                        <a editable-text = " p.project1 ">{{p.project1 || "empty"}}</a>
+                        <br/>
+                        <a editable-text = " p.project2 ">{{p.project2 || "empty"}}</a>
                     </ul>
 
                     <br/><br/>
@@ -95,11 +125,20 @@
                     <br/><br/>
                     <div ng-repeat="i in myimage"style="display: inline;">
                         <img src="{{i.language}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                        <p style="display: inline; font-size: 20px;">Language</p>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Language</p>
-                    <div ng-repeat="a in myLanguage" style="margin-left:20px;margin-top: 20px;">
-                        <div style="display: inline;margin-top: 20px;">{{a.language1}}</div>
-                        <div >{{a.language2}}</div>
+                    <form ng-show="visiblelanguage">
+                        <label>Information:</label>
+                        <input type="text" ng-model="project" placeholder="INFORMATION" ng-required/>
+                        <input  type="button"  value="Save" ng-click="AddLanguage()">
+                    </form>
+                    <div ng-hide="visiblelanguage">
+
+                        </span><button style="margin-left:620px;width:50px;height:30px;" ng-click="visiblelanguage=true">Add</button> </br></br>
+                        <div ng-repeat="a in myLanguage" style="margin-left:20px;margin-top: 20px;">
+                        <a style="display: inline;margin-top: 20px;" editable-text = " a.language1 ">{{a.language1 || "empty"}}</a>
+                        <br/>
+                        <a editable-text = " a.language2 ">{{a.language2 || "empty"}}</a>
                     </div>
                     <br/><br/>
                 </div>
@@ -108,29 +147,46 @@
                     <br/><br/>
                     <div ng-repeat="i in myimage" style="display: inline;">
                         <img src="{{i.skill}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                        <p style="display: inline; font-size: 20px;">Skill</p>
+                        <p style="margin-top: 20px;margin-left: 30px;">Top skill</p>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Skill</p>
-                    <p style="margin-top: 20px;margin-left: 30px;">Top skill</p>
+                    <form ng-show="visibleskill">
+                        <label>Information:</label>
+                        <input type="text" ng-model="skill" placeholder="INFORMATION" ng-required/>
+                        <input  type="button"  value="Save" ng-click="AddSkill()">
+                    </form>
+                    <div ng-hide="visibleskill">
+                        </span><button style="margin-left:600px;width:50px;height:30px;" ng-click="visibleskill=true">Add</button> </br></br>
                     <ul ng-repeat="s in myskill" style="margin-top: 10px;">
-                        <li>{{s.skill1}}</li>
-                        <li>{{s.skill2}}</li>
+                        <a editable-text = " s.skill1" >{{s.skill1 || "empty"}}</a>
+                        <br/>
+                        <a editable-text = " s.skill2">{{s.skill2 || "empty"}}</a>
                     </ul>
 
-
+                    </div>
                     <br/><br/>
                 </div>
                 <div class="col-sm-12" id="education"style="border-bottom: 1px solid #c0c0c0; ">
                     <br/><br/>
                     <div ng-repeat="i in myimage"style="display: inline;">
                         <img src="{{i.education}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                        <p style="display: inline; font-size: 20px;">Education</p>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Education</p>
+                    <form ng-show="visibleeducation">
+                        <label>Information:</label>
+                        <input type="text" ng-model="education" placeholder="INFORMATION" ng-required/>
+                        <input  type="button"  value="Save" ng-click="AddEducation()">
+                    </form>
+                    <div ng-hide="visibleeducation">
+
+                        </span><button style="margin-left:600px;width:50px;height:30px;" ng-click="visibleeducation=true">Add</button> </br></br>
                     <ul ng-repeat="e in myeducation" style="margin-top: 10px;">
-                        <li>{{e.education1}}</li>
+                        <a editable-text = "e.education1" >{{e.education1 || "empty"}}</a>
 
                     </ul>
 
                     <br/><br/>
+                </div>
                 </div>
                 <hr>
 
