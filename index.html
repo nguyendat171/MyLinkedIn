@@ -86,11 +86,8 @@
 
                         </span><button style="margin-left:635px;width:50px;height:30px;" ng-click="visibleexperience=true">Add</button> </br></br>
                     <div ng-repeat="ex in myExperience">
-                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience1 ">{{ex.experience1 || "empty"}}</a>
+                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience ">{{ex.experience || "empty"}}</a>
                         <br/>
-                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience2 ">{{ex.experience2 || "empty"}}</a>
-                        <br/>
-                        <a style="margin-left: 30px;margin-top: 20px;" editable-text = " ex.experience3 ">{{ex.experience3 || "empty"}}</a>
                     </div>
                     </div>
                     <br/><br/>
@@ -112,11 +109,11 @@
                     </form>
                     <div ng-hide="visibleproject">
 
-                        </span><button style="margin-left:635px;width:50px;height:30px;" ng-click="visibleproject=true">Add</button> </br></br>                    <ul ng-repeat="p in myproject" style="margin-top: 10px;">
-                        <a editable-text = " p.project1 ">{{p.project1 || "empty"}}</a>
+                        </span><button style="margin-left:635px;width:50px;height:30px;" ng-click="visibleproject=true">Add</button> </br></br>
+                        <div ng-repeat="p in myProject" style="margin-top: 10px;">
+                        <a editable-text = " p.project ">{{p.project || "empty"}}</a>
                         <br/>
-                        <a editable-text = " p.project2 ">{{p.project2 || "empty"}}</a>
-                    </ul>
+                    </div>
 
                     <br/><br/>
                 </div>
@@ -129,16 +126,15 @@
                     </div>
                     <form ng-show="visiblelanguage">
                         <label>Information:</label>
-                        <input type="text" ng-model="project" placeholder="INFORMATION" ng-required/>
+                        <input type="text" ng-model="language" placeholder="INFORMATION" ng-required/>
                         <input  type="button"  value="Save" ng-click="AddLanguage()">
                     </form>
                     <div ng-hide="visiblelanguage">
 
                         </span><button style="margin-left:620px;width:50px;height:30px;" ng-click="visiblelanguage=true">Add</button> </br></br>
                         <div ng-repeat="a in myLanguage" style="margin-left:20px;margin-top: 20px;">
-                        <a style="display: inline;margin-top: 20px;" editable-text = " a.language1 ">{{a.language1 || "empty"}}</a>
+                        <a style="display: inline;margin-top: 20px;" editable-text = " a.language ">{{a.language || "empty"}}</a>
                         <br/>
-                        <a editable-text = " a.language2 ">{{a.language2 || "empty"}}</a>
                     </div>
                     <br/><br/>
                 </div>
@@ -157,10 +153,9 @@
                     </form>
                     <div ng-hide="visibleskill">
                         </span><button style="margin-left:600px;width:50px;height:30px;" ng-click="visibleskill=true">Add</button> </br></br>
-                    <ul ng-repeat="s in myskill" style="margin-top: 10px;">
-                        <a editable-text = " s.skill1" >{{s.skill1 || "empty"}}</a>
+                    <ul ng-repeat="s in mySkill" style="margin-top: 10px;">
+                        <a editable-text = " s.skill" >{{s.skill || "empty"}}</a>
                         <br/>
-                        <a editable-text = " s.skill2">{{s.skill2 || "empty"}}</a>
                     </ul>
 
                     </div>
@@ -180,8 +175,8 @@
                     <div ng-hide="visibleeducation">
 
                         </span><button style="margin-left:600px;width:50px;height:30px;" ng-click="visibleeducation=true">Add</button> </br></br>
-                    <ul ng-repeat="e in myeducation" style="margin-top: 10px;">
-                        <a editable-text = "e.education1" >{{e.education1 || "empty"}}</a>
+                    <ul ng-repeat="e in myEducation" style="margin-top: 10px;">
+                        <a editable-text = "e.education" >{{e.education || "empty"}}</a>
 
                     </ul>
 
